@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "lib": ["es2015"],
+  "include": ["src"]
+}
