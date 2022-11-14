@@ -3,6 +3,9 @@ to run
 ```
 git clone https://github.com/sambino5000/cashserver
 ```
+```
+cd cashserver
+```
 
 install with npm
 ```
