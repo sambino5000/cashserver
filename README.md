@@ -27,8 +27,7 @@ enpoint params for Escrow participants are in this order <arbiter, seller, buyer
 try with curl:
 
 ```
-curl
-http://localhost:2323/escrow/ecash:qz5mxk2zjmy9ar85k0m7zcrfqqpcjj99qs22rwzxzx,ecash:qqu2ghz669cqcx2j6f55h2ljdldcw383u57np2lezu,ecash:qz5mxk2zjmy9ar85k0m7zcrfqqpcjj99qs22rwzxzx
+curl http://localhost:2323/escrow/ecash:qz5mxk2zjmy9ar85k0m7zcrfqqpcjj99qs22rwzxzx,ecash:qz5mxk2zjmy9ar85k0m7zcrfqqpcjj99qs22rwzxzx,ecash:qz5mxk2zjmy9ar85k0m7zcrfqqpcjj99qs22rwzxzx
 ```
 
 spending from this covenant address will require you to build a transaction with your
