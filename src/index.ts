@@ -9,10 +9,13 @@ app.use(cors())
 
 app.param('addr', async (req, res, next, addr) => {
     // const pkhashes = await req.params.addr.split(',');
-    const pkhashes = await req.params.addr.split(',');
-    const arbiter = (pkhashes[0].trim())
-    const seller = (pkhashes[1].trim())
-    const buyer = (pkhashes[2].trim())
+    const addrs = await req.params.addr.split(',');
+    const arbiter = 
+    binToHex(decodeCashAddress(addrs[0]).hash)
+    const seller = 
+    binToHex(decodeCashAddress(addrs[1]).hash)
+    const buyer = 
+    binToHex(decodeCashAddress(addrs[2]).hash)
     console.log("arbiter.length",arbiter.length)
     console.log("seller.length",seller.length)
     console.log("buyer.length",buyer.length)

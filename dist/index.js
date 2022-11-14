@@ -11,10 +11,10 @@ const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.param('addr', async (req, res, next, addr) => {
     // const pkhashes = await req.params.addr.split(',');
-    const pkhashes = await req.params.addr.split(',');
-    const arbiter = (pkhashes[0].trim());
-    const seller = (pkhashes[1].trim());
-    const buyer = (pkhashes[2].trim());
+    const addrs = await req.params.addr.split(',');
+    const arbiter = (0, libauth_1.binToHex)((0, libauth_1.decodeCashAddress)(addrs[0]).hash);
+    const seller = (0, libauth_1.binToHex)((0, libauth_1.decodeCashAddress)(addrs[1]).hash);
+    const buyer = (0, libauth_1.binToHex)((0, libauth_1.decodeCashAddress)(addrs[2]).hash);
     console.log("arbiter.length", arbiter.length);
     console.log("seller.length", seller.length);
     console.log("buyer.length", buyer.length);
